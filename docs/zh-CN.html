@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WinAdapterSwitcher — Windows 一键网络切换工具</title>
+    <meta name="description" content="Windows 10/11 托盘网络切换工具，一键在有线和无线网络之间切换。绿色单文件，无安装、无遥测。">
+    <meta name="theme-color" content="#060d12">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:title" content="WinAdapterSwitcher — Windows 一键网络切换工具">
+    <meta property="og:description" content="不必再翻多层 Windows 设置，直接切到手机热点。绿色、开源、无遥测。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/app.ico">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="zh-CN.html" aria-label="WinAdapterSwitcher 首页">
+                <img src="assets/app.png" alt="" width="34" height="34">
+                <span>WinAdapterSwitcher</span>
+            </a>
+            <nav class="nav" aria-label="主导航">
+                <a href="#features">功能</a>
+                <a href="#how">使用方式</a>
+                <a href="#download">下载</a>
+                <a href="#faq">常见问题</a>
+                <a class="nav-github" href="https://github.com/NOTF-API/win-adapter-switcher">GitHub ↗</a>
+                <a class="lang" href="index.html" lang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> Windows 10 / 11 · 绿色版 · 开源</p>
+                    <h1>网络切换，<span class="gradient">一键完成。</span></h1>
+                    <p class="lede">当运营商 DNS 污染、拦截连接或直接 RESET 时，不必再翻多层 Windows 设置，直接切到手机热点。</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="https://github.com/NOTF-API/win-adapter-switcher/releases/download/v1.0.0/WinAdapterSwitcher-v1.0.0.zip">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                            下载 v1.0.0
+                        </a>
+                        <a class="button button-ghost" href="https://github.com/NOTF-API/win-adapter-switcher">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.8 5.5-5.5 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .7Z"/></svg>
+                            在 GitHub 查看
+                        </a>
+                    </div>
+                    <ul class="meta-list">
+                        <li>单个 exe</li>
+                        <li>约 150 KB</li>
+                        <li>无遥测</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual" role="img" aria-label="WinAdapterSwitcher 托盘菜单预览">
+                    <div class="hero-glow"></div>
+                    <div class="tray-card">
+                        <div class="tray-head">
+                            <img src="assets/app.png" alt="" width="34" height="34">
+                            <div>
+                                <strong>WinAdapterSwitcher</strong>
+                                <span>已连接 · Wi-Fi</span>
+                            </div>
+                            <span class="tray-badge">Tray</span>
+                        </div>
+                        <div class="tray-status">
+                            <span class="status-dot"></span>
+                            <div>
+                                <span>无线网络</span>
+                                <strong>WLAN · 已连接</strong>
+                            </div>
+                        </div>
+                        <div class="tray-menu">
+                            <div class="tray-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="7" height="12" rx="2"/><path d="M10 10h3l4 2-4 2h-3"/><path d="M17 10v4"/></svg>
+                                <span>仅开启有线网络</span>
+                                <span class="row-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span>
+                            </div>
+                            <div class="tray-row active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5a13 13 0 0 1 16 0"/><path d="M7 13a8.5 8.5 0 0 1 10 0"/><path d="M10 16.5a4 4 0 0 1 4 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+                                <span>仅开启无线网络</span>
+                                <span class="row-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span>
+                            </div>
+                            <div class="tray-separator"></div>
+                            <div class="tray-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v9"/><path d="M6.4 6.4a8 8 0 1 0 11.2 0"/></svg>
+                                <span>启用全部网络</span>
+                            </div>
+                            <div class="tray-row danger">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 6 12 12"/></svg>
+                                <span>禁用全部网络</span>
+                            </div>
+                            <div class="tray-separator"></div>
+                            <div class="tray-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+                                <span>单独启用/禁用网卡</span>
+                            </div>
+                            <div class="tray-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+                                <span>刷新状态</span>
+                            </div>
+                            <div class="tray-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+                                <span>设置...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toast-card">
+                        <span class="status-dot"></span>
+                        <div>
+                            <strong>已切换到无线网络</strong>
+                            <span>有线网卡已禁用</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">为什么做这个</p>
+                    <h2>为网络突然不可用的那一刻而做。</h2>
+                    <p>DNS 污染、连接拦截、直接 RESET，在一些网络里是日常。通常切到手机热点就能解决，但 Windows 每次都要重新翻设置。</p>
+                </div>
+                <div class="why-grid">
+                    <div class="story-card">
+                        <span class="story-tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg>
+                            日常痛点
+                        </span>
+                        <blockquote>“运营商 DNS 污染、拦流量、直接 RESET，切个热点不该点十几次。”</blockquote>
+                        <p>WinAdapterSwitcher 就是从这个工作流来的：把最常用的网络操作放在托盘右键菜单里，把更深一层的控制留在简洁的设置窗口。</p>
+                    </div>
+                    <div class="side-stack">
+                        <div class="side-card">
+                            <span class="label">问题</span>
+                            <strong>Windows 把网卡控制藏得太深。</strong>
+                            <p>设置 → 网络和 Internet → 高级网络设置 → 更多网络适配器选项 → 右键网卡 → 禁用/启用。</p>
+                        </div>
+                        <div class="side-card">
+                            <span class="label">解决</span>
+                            <strong>两个托盘操作覆盖常见场景。</strong>
+                            <p>“仅开启有线网络”和“仅开启无线网络”会开启一侧并关闭另一侧；其他操作也只多一次点击。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">功能</p>
+                    <h2>小工具，完整控制。</h2>
+                    <p>无需安装、无后台服务、无账号。只有托盘图标和你真正会用的网络控制。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h12l-3-3"/><path d="M17 17H5l3 3"/></svg>
+                        </div>
+                        <h3>一键模式</h3>
+                        <p>仅开启有线、仅开启无线、启用全部、禁用全部。破坏性操作会先确认。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10"/><path d="M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2"/><path d="M10 17h10"/><circle cx="8" cy="17" r="2"/></svg>
+                        </div>
+                        <h3>单网卡控制</h3>
+                        <p>查看系统里的所有网卡，只切换你需要的那一个，不影响其他网卡。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+                        </div>
+                        <h3>八种语言</h3>
+                        <p>简体中文、繁體中文、English、日本語、한국어、Deutsch、Français、Español；首次启动跟随系统。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </div>
+                        <h3>可靠的开机自启</h3>
+                        <p>使用最高权限计划任务，避免 Windows 在登录时静默拦截。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 4 4-4 4"/><path d="M12 17h7"/><rect x="2.5" y="3.5" width="19" height="17" rx="2"/></svg>
+                        </div>
+                        <h3>命令行与快捷方式</h3>
+                        <p>在脚本、快捷方式或计划任务中使用 <code>--wired</code>、<code>--wifi</code>、<code>--enable NAME</code>、<code>--disable NAME</code>。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.2c0 4.8 3.2 8.7 7.5 9.8 4.3-1.1 7.5-5 7.5-9.8V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h3>绿色且私密</h3>
+                        <p>单个 exe，配置就在旁边；无安装、无遥测、无联网行为。删除文件夹即可移除。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="how">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">使用方式</p>
+                    <h2>从下载到切换网络，只需要几秒。</h2>
+                    <p>没有安装向导。首次运行会自动识别网卡，并把配置保存在 exe 旁边。</p>
+                </div>
+                <div class="steps">
+                    <article class="step">
+                        <div class="step-number">01</div>
+                        <h3>下载并解压</h3>
+                        <p>下载 Release zip，解压到任意位置。无需安装。</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">02</div>
+                        <h3>运行 exe</h3>
+                        <p>同意一次 UAC 提权，Windows 才允许修改网卡状态。</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">03</div>
+                        <h3>使用托盘</h3>
+                        <p>右键托盘图标选择模式；双击打开设置。</p>
+                    </article>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-bar"><span></span><span></span><span></span><em>PowerShell</em></div>
+                    <pre><span class="prompt">PS&gt;</span> .\WinAdapterSwitcher.exe --wifi       <span class="comment"># 仅开启无线网络</span>
+<span class="prompt">PS&gt;</span> .\WinAdapterSwitcher.exe --wired      <span class="comment"># 仅开启有线网络</span>
+<span class="prompt">PS&gt;</span> .\WinAdapterSwitcher.exe --enable "以太网"</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="download">
+            <div class="container">
+                <div class="download-card">
+                    <div class="download-copy">
+                        <p class="kicker">下载</p>
+                        <h2>网络出问题时，它已经准备好了。</h2>
+                        <p>Windows 10 / 11 绿色版。无安装、无账号、无遥测。</p>
+                        <ul class="spec-list">
+                            <li>Windows 10 / 11</li>
+                            <li>.NET Framework 4.8</li>
+                            <li>约 54 KB zip</li>
+                            <li>MIT 许可</li>
+                        </ul>
+                    </div>
+                    <div class="download-actions">
+                        <a class="button button-primary" href="https://github.com/NOTF-API/win-adapter-switcher/releases/download/v1.0.0/WinAdapterSwitcher-v1.0.0.zip">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                            下载 v1.0.0
+                        </a>
+                        <a class="button button-ghost" href="https://github.com/NOTF-API/win-adapter-switcher/releases/tag/v1.0.0">发布说明</a>
+                        <span class="download-note">SHA-256 校验值见 Release 页面。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">常见问题</p>
+                    <h2>你需要知道的。</h2>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>需要管理员权限吗？</summary>
+                        <p>需要。Windows 修改网卡状态必须提权。exe 声明了 <code>requireAdministrator</code>，启动时会弹 UAC。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>会安装东西吗？</summary>
+                        <p>不会。只有一个绿色 exe。开启开机自启会创建当前用户的计划任务，关闭时会删除该任务。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>会收集数据吗？</summary>
+                        <p>不会。程序不联网、无遥测、无广告。配置保存在 exe 同目录的 <code>config.ini</code>。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>为什么用计划任务自启？</summary>
+                        <p>Windows 对 Run 注册表中提权程序的登录启动不可靠；最高权限计划任务可以稳定启动，且不会额外弹 UAC。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>可以在脚本里调用吗？</summary>
+                        <p>可以。使用命令行参数；程序已运行时，命令会转发给现有实例。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <div>WinAdapterSwitcher · MIT 许可 · <span data-year>2026</span></div>
+                <div class="footer-note">与 Microsoft 无关。</div>
+            </div>
+            <nav class="footer-links" aria-label="页脚链接">
+                <a href="https://github.com/NOTF-API/win-adapter-switcher">GitHub</a>
+                <a href="https://github.com/NOTF-API/win-adapter-switcher/releases">Releases</a>
+                <a href="https://github.com/NOTF-API/win-adapter-switcher/issues">Issues</a>
+                <a href="index.html" lang="en">English</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+</body>
+</html>
