@@ -1,0 +1,15 @@
+# Build output
+WinAdapterSwitcher.exe
+WinAdapterSwitcher.old.exe
+*.pdb
+
+# Local configuration and logs (generated next to the exe)
+config.ini
+WinAdapterSwitcher.log
+
+# IDE / OS noise
+.vs/
+bin/
+obj/
+*.user
+Thumbs.db
